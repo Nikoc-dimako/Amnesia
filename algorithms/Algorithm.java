@@ -39,5 +39,4 @@ public interface Algorithm {
     public Object getResultSet();
     public Graph getLattice();
     public boolean isAnonymousResult(LatticeNode node);
-    
 }
