@@ -185,9 +185,9 @@ public class AppCon {
             String input = (String)session.getAttribute("inputpath");
             if (input == null){
 
-               //String rootPath = System.getProperty("catalina.home");
+               String rootPath = System.getProperty("catalina.home");
                //String rootPath = "/usr/local/apache-tomcat-8.0.15";
-                String rootPath = "/var/lib/tomcat8";
+                //String rootPath = "/var/lib/tomcat8";
                 dir = new File(rootPath + File.separator + "amnesia"+ File.separator + session.getId());  
                 if (!dir.exists()){
                     dir.mkdirs();
@@ -350,8 +350,8 @@ public class AppCon {
                     
                     //String rootPath = "/usr/local/apache-tomcat-8.0.15";
                     //System.out.println("session id  = " + session.getId());
-                    //String rootPath = System.getProperty("catalina.home");
-                    String rootPath = "/var/lib/tomcat8";
+                    String rootPath = System.getProperty("catalina.home");
+                    //String rootPath = "/var/lib/tomcat8";
                     dir = new File(rootPath + File.separator + "amnesia"+ File.separator + session.getId());  
                     System.out.println("dir name = " + dir.getAbsolutePath() + "\t root path = " + rootPath);
                     if (!dir.exists()){
