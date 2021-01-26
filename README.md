@@ -24,15 +24,15 @@ This web service is responsible for anonymizing a dataset using template. There 
 
 - In the first case, the arguments for the web services are:
 
-        1.files: the absolute path of all the files, that you would like to upload (originaldataset file, template file and hierarchy files). There are some restrictions in this argument, the first file must be the original dataset and the second file must be the template file and then all the hierarchy files.
-        2. del: the split delimiter
+     1. files: the absolute path of all the files, that you would like to upload (originaldataset file, template file and hierarchy files). There are some restrictions in this argument, the first file must be the original dataset and the second file must be the template file and then all the hierarchy files.
+     2. del: the split delimiter
 After the execution of the web service, the anonymized dataset is stored in a file, with the name of your choice.
     Example via terminal:
     curl -s --form files=@/data/amnesiaAPI/data1/newData.txt --form     files=@/data/amnesiaAPI/template.txt --form     files=@/data/amnesiaAPI/data1/distinct_hier_salary.txt --form     files=@/data/amnesiaAPI/data1/distinct_hier_age.txt --form del=, --out ./(name of output     file) http://localhost:8181/anonymizedata
 
 - In the second case, the arguments are:
-  1.files: only the absolute path of the original dataset.
-  2.del: the split delimiter
+  1. files: only the absolute path of the original dataset.
+  2. del: the split delimiter
 After the execution of the web service, the template file is stored in a file, name of your choice.
     Example via terminal:
     curl -s --form files=@/data/amnesiaAPI/data1/newData.txt --form del=, --out ./(name of template file) http://localhost:8181/anonymizedata
